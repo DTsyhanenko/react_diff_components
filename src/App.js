@@ -1,36 +1,25 @@
-import { GoBell, GoCloudDownload, GoBriefcase } from "react-icons/go";
-import Button from "./Button";
+import Accordion from "./components/Accordion";
 
 function App() {
+    const items = [
+        {
+            id: 'df76',
+            label: 'Lorem ipsum dolor sit amet.',
+            content: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+        },
+        {
+            id: 'w45b',
+            label: 'Consetetur sadipscing elitr.',
+            content: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
+        },
+        {
+            id: '6r89',
+            label: 'Stet clita kasd gubergren.',
+            content: 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.'
+        },
+    ];
 
-    return (
-        <div>
-            <div>
-                <Button secondary outline rounded className="mb-5">
-                    <GoBell />
-                    Click 1
-                </Button>
-            </div>
-            <div>
-                <Button danger outline>
-                    <GoCloudDownload />
-                    Click 2
-                </Button>
-            </div>
-            <div>
-                <Button warning>
-                    <GoBriefcase />
-                    Click 3
-                </Button>
-            </div>
-            <div>
-                <Button success outline>Click 4</Button>
-            </div>
-            <div>
-                <Button primary rounded>Click 5</Button>
-            </div>
-        </div>
-    );
+    return <Accordion items={items} />;
 }
 
 export default App;
