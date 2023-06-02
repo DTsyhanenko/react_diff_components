@@ -8,11 +8,20 @@ function Accordion({ items }) {
         In this case if we cannot use short and longhand versions we put event above mapping function. But with the problems with scope of function we need to use a hybrid of a long and short version
     */
         const handleClick = (nextIndex) => {
+            setExpandedIndex((currentExpendedIndex) => {
+                if (currentExpendedIndex === nextIndex) {
+                    return -1;
+                } else {
+                    return nextIndex;
+                }
+            });
+            /*
             if (expandedIndex === nextIndex) {
                 setExpandedIndex(-1);
             } else {
                 setExpandedIndex(nextIndex);
             }
+            */
         };
 
     const renderedItems = items.map((item, index) => {
